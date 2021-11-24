@@ -9,6 +9,10 @@ func GetFriendCount() int{
 	return 3
 }
 
+func GetMyAge ()(int,bool){
+	return 100, true
+}
+
 func main() {
 	// color := "red"
 	// if color == "red" {
@@ -40,6 +44,24 @@ func main() {
 		fmt.Println("오늘 내 지갑을 털어봐")
 	}
 
+
+	
+	// if 초기문; 조건문 {
+	// 		blah blah
+	// }
+	// 검사에 사용할 변수를 초기화 할 때 사용
+
+	if age,ok := GetMyAge(); ok && age<20 {
+		fmt.Println("젊음",age)
+		} else if ok&& age<30{
+		fmt.Println("아직 괜춘",age)
+
+	} else if ok{
+		fmt.Println("굿굿굿")
+	} else {
+		fmt.Println("아무것도 아님")
+	}
+	fmt.Println("ㅇㅇㅇ",age)
 
 
 
